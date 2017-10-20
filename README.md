@@ -11,8 +11,8 @@
     #=> true
 
     %w(stop stopping run cry quick quickly furtive furtively fertive nonce)\
-      .all? {|x| x.include? x}
-    #=> true
+      .map {|x| a.include? x}
+    #=> [true, true, true, true, true, false, true, false, false, true] 
 
     a.include? 'frt'
     #=> false
@@ -22,4 +22,3 @@
 * wordsdotdat https://rubygems.org/gems/wordsdotdat
 
 words wordsdotdat dictionary nouns adjectives gem
-
