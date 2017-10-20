@@ -11,6 +11,11 @@ class WordsDotDat
 
     def adjs()   @adjs ||= load_data 'adjs.dat'    end
     def nouns() @nouns ||= load_data 'nouns.dat'   end
+    def words() adjs + nouns                       end
+      
+    alias list words
+    
+    private
 
     def load_data(filename)
 
